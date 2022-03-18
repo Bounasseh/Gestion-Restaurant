@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" th:href="@{../../css/bootstrap.css}"/>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script src="../../js/script.min.js" th:href="@{../../js/script.min.js}"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container col-md-10">
+        <a class="navbar-brand" href="#"><h3>MonResto</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <!-- pour l'ordre des choses -->
+            <ul class="navbar-nav mr-auto">
+                <!-- <button class="btn btn-outline-light rounded-pill" type="submit">Ajouter un restaurant</button>-->
+            </ul>
+
+            <ul class="navbar-nav mx-auto">
+                <a class="mx-auto my-1" th:href="@{'/restaurants/' + ${restaurantId} + '/meals/new'}">
+                <button class="btn btn-lg btn-outline-light rounded-pill mr-1" type="submit">Ajouter un plat</button>
+                </a>
+                <a class="mx-auto my-1" th:href="@{'/manager/restaurants/' + ${restaurantId}}">
+                <button class="btn btn-lg btn-outline-light rounded-pill active mx-1" type="submit">Liste des plats</button>
+                </a>
+                <a class="mx-auto my-1" th:href="@{'/manager/restaurants/' + ${restaurantId} + '/reviews'}">
+                <button class="btn btn-lg btn-outline-light rounded-pill ml-1" type="submit">Avis des clients</button>
+                </a>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown mr-0 mx-auto">
+                    <a class="nav-link dropdown-toggle btn-lg" data-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="true" aria-expanded="false">Déconnexion</a>
+                    <div class="dropdown-menu">
+                        <form th:action="@{/logout}" method="post">
+                            <button class="btn-lg dropdown-item" type="submit">Déconnexion</button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container col-sm-10">
+    <div class="cantainer">
+        <div class="row mt-3">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card text-white bg-secondary pb-3">
+                    <div class="card-header bg-primary"><h5 class="my-auto text-center"><b>A propos du restaurant</b>
+                    </h5></div>
+                    <div class="container card-body">
+                        <div class="row mx-1">
+                            <img src="static\images\managerProfile.png" th:src="@{../../images/restaurant.jpg}"
+                                 class="mx-auto img-fluid img-thumbnail h-100 w-100" alt="manager_profile">
+                        </div>
+                    </div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Nom : ' + ${restaurant.name}"><b>Nom
+                        d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Categorie : ' + ${restaurant.restaurantCategory.category}">
+                        <b>Nom d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Téléphone : ' + ${restaurant.phone}"><b>Nom
+                        d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Ville : ' + ${restaurant.city.city}"><b>Nom
+                        d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Horaires d\'ouverture : ' + ${restaurant.openingTime}">
+                        <b>Nom d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Horaires de fermeture : ' + ${restaurant.closingTime}">
+                        <b>Nom d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Description : ' + ${restaurant.description}"><b>Nom
+                        d'utilisatur</b></h5></div>
+                    <div class="col-xs-12" style="height:50px;"></div>
+                    <button type="button" class="btn btn-primary py-1"><a class="mx-auto btn text-white"
+                                                                          th:href="@{'/restaurants/edit/' + ${restaurant.id}}"><b>Modifier
+                        ce restaurant</b></a></button>
+                    <button type="button" class="btn btn-dark py-1"><a class="mx-auto btn text-white" href=""><b>Supprimer
+                        ce restaurant</b></a></button>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-8">
+                <div class="row">
+                    <div th:each="meal : ${restaurant.meals}" class="col-12 col-lg-6 col-xl-4 my-1 card shadow-sm" data-bs-hover-animate="pulse">
+                        <img src="static\images\meal.webp" th:src="@{../../images/meal.webp}"
+                             class="card-img-top" alt="restaurant">
+                        <div class="card-body">
+                            <div class="mx-sm-auto">
+                                <h5 class="card-title" th:text="'Nom du repas : ' + ${meal.meal}"></h5>
+                                <h5 class="card-title" th:text="'Prix : ' + ${meal.price} + ' DH'"></h5>
+                                <h5 class="card-title" th:text="'Catégorie : ' + ${meal.mealCategory.category}"></h5>
+                            </div>
+                            <div class="row row-cols-2">
+                                <a th:href="@{'/meals/edit/' + ${meal.id}}" class="btn btn-primary mx-sm-auto stretched-link">Modifier</a>
+                                <a th:href="@{/}" class="btn btn-dark mx-sm-auto">Supprimer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+</body>
+</html>

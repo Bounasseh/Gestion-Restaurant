@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" th:href="@{../../../css/bootstrap.css}"/>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container col-md-10">
+        <a class="navbar-brand" href="#"><h3>MonResto</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <!-- pour l'ordre des choses -->
+            <ul class="navbar-nav mr-auto">
+                <!-- <button class="btn btn-outline-light rounded-pill" type="submit">Ajouter un restaurant</button>-->
+            </ul>
+
+            <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav mx-auto">
+                    <a class="mx-auto my-1" th:href="@{'/client/restaurants/' + ${restaurantId}}">
+                        <button class="btn btn-lg btn-outline-light rounded-pill mx-1" type="submit">A propos du restaurant</button>
+                    </a>
+                    <a class="mx-auto my-1" th:href="@{'/client/restaurants/' + ${restaurantId} + '/reviews'}">
+                        <button class="btn btn-lg btn-outline-light rounded-pill active ml-1" type="submit">Qu'en pensez vous ?</button>
+                    </a>
+                </ul>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown mr-0 mx-auto">
+                    <a class="nav-link dropdown-toggle btn-lg" data-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="true" aria-expanded="false">Déconnexion</a>
+                    <div class="dropdown-menu">
+                        <form th:action="@{/logout}" method="post">
+                            <button class="btn-lg dropdown-item" type="submit">Déconnexion</button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container col-sm-10">
+    <div class="cantainer">
+        <div class="row mt-3">
+            <div class="col-sm-12 col-md-6 col-xl-4 col-12">
+                <div class="card text-white bg-secondary pb-3">
+                    <div class="card-header bg-primary"><h5 class="my-auto text-center"><b>A propos du restaurant</b>
+                    </h5></div>
+                    <div class="container card-body">
+                        <div class="row mx-1">
+                            <img src="static\images\restaurant.jpg" th:src="@{../../../images/restaurant.jpg}"
+                                 class="mx-auto img-fluid img-thumbnail h-100 w-100" alt="manager_profile">
+                        </div>
+                    </div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Nom : ' + ${restaurant.name}"><b>Nom
+                        d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Categorie : ' + ${restaurant.restaurantCategory.category}">
+                        <b>Nom d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Téléphone : ' + ${restaurant.phone}"><b>Nom
+                        d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Ville : ' + ${restaurant.city.city}"><b>Nom
+                        d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Horaires d\'ouverture : ' + ${restaurant.openingTime}">
+                        <b>Nom d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Horaires de fermeture : ' + ${restaurant.closingTime}">
+                        <b>Nom d'utilisatur</b></h5></div>
+                    <div class="card-header bg-secondary"><h5 class="my-auto text-center"
+                                                              th:text="'Description : ' + ${restaurant.description}"><b>Nom
+                        d'utilisatur</b></h5></div>
+                    <div class="col-xs-12" style="height:50px;"></div>
+                </div>
+                <div class="card-header bg-primary py-3"></div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-xl-8 col-12">
+                <div th:each="comment : ${comments}" class="row alert alert-dismissible alert-primary mx-auto">
+                    <div class="d-xl-none col-sm-12 text-center">
+                        <em><h5 th:text="${comment.createdAt}"></h5></em>
+                    </div>
+                    <div class="col-12 col-sm-12 col-xl-2 my-auto">
+                        <div class="d-block d-xl-none text-sm-center text-center">
+                            <img src="static\images\managerProfile.png" th:src="@{../../../images/managerProfile.png}"
+                                 class="w-25 h-25 rounded-circle img-fluid img-thumbnail" alt="manager_profile">
+                        </div>
+                        <div class="d-none d-xl-block text-sm-center text-center">
+                            <img src="static\images\managerProfile.png" th:src="@{../../../images/managerProfile.png}"
+                                 class="w-100 h-100 rounded-circle img-fluid img-thumbnail" alt="manager_profile">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-xl-10">
+                        <div class="row">
+                            <div class="col-sm-12 col-xl-6 col-12">
+                                <u><h5 class="text-primary text-sm-center text-center text-xl-left"
+                                       th:text="${#strings.capitalize(comment.client.username)}"></h5></u>
+                            </div>
+                            <div class="d-lg-none d-xl-block d-none col-12 col-xl-6 text-sm-center text-xl-right">
+                                <em><h5 th:text="${comment.createdAt}"></h5></em>
+                            </div>
+                        </div>
+                        <div class="row py-xl-4 my-auto">
+                            <h4 class="col-sm-12 col-12 text-xl-left text-center" th:text="${comment.comment}"></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+</body>
+</html>

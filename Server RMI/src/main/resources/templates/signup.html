@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" th:href="@{css/bootstrap.css}"/>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">MonResto</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ml-auto">
+                <button class="btn btn-secondary my-2 my-sm-0" type="button">Se connecter</button>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5 col-xl-4 col-md-6 col-sm-10">
+    <form th:action="@{/signup}" method="post">
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg" for="username">Nom d'utilisateur :</label>
+            <input name="username" value="username1" class="form-control form-control-lg" type="text"
+                   placeholder="Nom d'utilisateur" id="username">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg" for="email">Email :</label>
+            <input name="email" value="Bounasseh@Ham.za" class="form-control form-control-lg" type="text"
+                   placeholder="Nom d'utilisateur" id="email">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg" for="password">Mot de passe :</label>
+            <input name="password" value="password1" class="form-control form-control-lg" type="password"
+                   placeholder="Mot de passe" id="password">
+        </div>
+        <div class="form-group">
+            <label class="col-form-label col-form-label-lg" for="role">Je suis un :</label>
+            <select name="role" class="custom-select" id="role">
+                <option value="client">Client</option>
+                <option value="manager">Gérant de restaurant</option>
+            </select>
+        </div>
+        <button type="submit" class="mt-5 btn btn-primary btn-lg btn-block">Créer un compte</button>
+    </form>
+</div>
+
+</body>
+</html>

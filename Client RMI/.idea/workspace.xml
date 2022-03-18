@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b6a74eaa-2842-47af-aa1f-9973af5e9c3f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../../" />
+  </component>
+  <component name="ProjectId" id="1nc2baSbvdzIGl7zRL9dBpRWJw4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Server" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.demo.model" />
+      <recent name="com.example.demo.rmi.inter" />
+      <recent name="com.example.demo.entities" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.demo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\RMI\Client\src\main\resources\templates" />
+      <recent name="D:\RMI\Client\src\main\resources\static" />
+      <recent name="D:\RMI\Client\src\main\resources\static\css" />
+      <recent name="D:\RMI\Client\src\main\resources\static\js" />
+      <recent name="D:\RMI\Client\src\main\java\com\example\demo\rmi\inter" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo.controller" />
+      <recent name="com.example.demo.rmi.inter" />
+      <recent name="com.example.demo.model" />
+      <recent name="com.example.demo.rmi" />
+      <recent name="com.example.demo.dao" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\RMI\Client\src\main\resources\static\images" />
+      <recent name="D:\demo\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6a74eaa-2842-47af-aa1f-9973af5e9c3f" name="Default Changelist" comment="" />
+      <created>1611675131214</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611675131214</updated>
+      <workItem from="1611675150095" duration="6883000" />
+      <workItem from="1611723103871" duration="20142000" />
+      <workItem from="1611748368618" duration="41542000" />
+      <workItem from="1611847535789" duration="63415000" />
+      <workItem from="1612036841165" duration="529000" />
+      <workItem from="1612311127436" duration="3757000" />
+      <workItem from="1612315109965" duration="2726000" />
+      <workItem from="1612319423724" duration="19156000" />
+      <workItem from="1612362218466" duration="1756000" />
+      <workItem from="1612370116268" duration="1297000" />
+      <workItem from="1612371574996" duration="10016000" />
+      <workItem from="1612514262707" duration="19262000" />
+      <workItem from="1612622592637" duration="43728000" />
+      <workItem from="1612691410378" duration="743000" />
+      <workItem from="1612692255270" duration="28090000" />
+      <workItem from="1612733754216" duration="747000" />
+      <workItem from="1612741513707" duration="103000" />
+      <workItem from="1612741625933" duration="51939000" />
+      <workItem from="1612838120641" duration="597000" />
+      <workItem from="1612855871568" duration="2187000" />
+      <workItem from="1612858337865" duration="62554000" />
+      <workItem from="1612997072191" duration="16910000" />
+      <workItem from="1613061498044" duration="36611000" />
+      <workItem from="1613216993360" duration="23555000" />
+      <workItem from="1613259987338" duration="42381000" />
+      <workItem from="1613362060082" duration="6161000" />
+      <workItem from="1613467808537" duration="7151000" />
+      <workItem from="1616155440976" duration="139000" />
+      <workItem from="1622633820128" duration="312000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="260" y="309" key="FileChooserDialogImpl" timestamp="1622633928399">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="260" y="279" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1616155468450" />
+    <state x="260" y="309" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1622633928399" />
+  </component>
+</project>
